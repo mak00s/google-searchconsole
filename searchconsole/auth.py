@@ -64,7 +64,7 @@ def authenticate(client_config, credentials=None, serialize=None):
 
             raise ValueError("Client secrets must be a mapping or path to file")
 
-        flow.run_local_server()
+        flow.run_local_server(port=8081)
         credentials = flow.credentials
 
     else:
